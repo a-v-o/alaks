@@ -29,7 +29,7 @@ export default function Navbar() {
     <header>
       <nav className="fixed top-0 left-0 w-full flex flex-col items-end p-8 z-50">
         <div
-          className="flex flex-col gap-1.5 md:hidden cursor-pointer z-50"
+          className="flex flex-col gap-1.5 cursor-pointer z-50"
           onClick={handleClick}
         >
           <span
