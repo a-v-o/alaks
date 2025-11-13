@@ -4,5 +4,31 @@ h2, p, button, li {
 
 h3 {
     font-size: 48px;
-    font-family: "Aladin", sans-serif;   
+    font-family: "Pacifico", sans-serif;   
+}
+
+.collection {
+    position: relative;
+    overflow: hidden;
+}
+
+.collection::before, .collection::after {
+    content: "";
+    position: absolute;
+    width: 150vw;
+    height: 135px;
+    background-color: #fff;
+}
+
+.collection::before {
+    left: 0;
+    right: 0;
+    top: -120px;
+    transform: rotate(-1deg);
+}
+
+.collection::after {
+    right: 0;
+    bottom: -100px;
+    transform: rotate(2deg);
 }

@@ -5,7 +5,8 @@ import CollectionText from "./CollectionText";
 import AnimatedText from "./AnimatedText";
 
 const tShirts = ["alaks-1.JPG", "alaks-3.JPG", "alaks-4.JPG", "alaks-5.JPG"];
-const hoodies = ["alaks-2.JPG", "alaks-6.JPG", "alaks-8.JPG", "alaks-10.JPG"];
+const hoodies = ["alaks-2.JPG", "alaks-6.JPG", "alaks-8.JPG"];
+const sweats = ["alaks-10.JPG"];
 const shorts = ["alaks-11.JPG", "alaks-13.JPG"];
 const trousers = ["alaks-9.JPG", "alaks-12.JPG"];
 
@@ -24,10 +25,10 @@ function generateRandomIntegers(numbers: number[][]) {
 }
 
 function generateCoords(length: number) {
-  const topLeft = [0, 0];
-  const bottomRight = [100, 100];
-  const topRight = [0, 100];
-  const bottomLeft = [100, 0];
+  const topLeft = [0, 5];
+  const bottomRight = [100, 95];
+  const topRight = [0, 95];
+  const bottomLeft = [100, 5];
 
   const percentages = generateRandomIntegers([
     topLeft,
@@ -41,6 +42,7 @@ function generateCoords(length: number) {
 export default function Shop() {
   const tShirtPercents = generateCoords(tShirts.length);
   const hoodiePercents = generateCoords(hoodies.length);
+  const sweatPercents = generateCoords(sweats.length);
   const shortPercents = generateCoords(shorts.length);
   const trouserPercents = generateCoords(trousers.length);
   const isMobile = useIsMobile();
@@ -49,9 +51,7 @@ export default function Shop() {
   return (
     <section className="w-full pt-12" id="collection">
       <div className="flex flex-col items-center w-full relative">
-        <p className="text-2xl md:text-4xl mb-24">
-          What can you find in our store?
-        </p>
+        <p className="text-2xl md:text-4xl mb-12">Shop our collection</p>
 
         <Collection>
           <CollectionText>
@@ -108,6 +108,37 @@ export default function Shop() {
                   top={top}
                   left={left}
                   src={hoodie}
+                  alt="image of an Alaks hoodie"
+                />
+              </div>
+            );
+          })}
+        </Collection>
+
+        <Collection>
+          <CollectionText>
+            <h3 className="text-3xl uppercase">
+              <AnimatedText text="Sweatshirts" />
+            </h3>
+            <p>
+              <AnimatedText text="Stay warm, stay colorful, stay you. Grab a handcrafted tie-and-dye sweatshirt that blends comfort, creativity and everyday cool" />
+            </p>
+          </CollectionText>
+          {sweats.map((sweat, index) => {
+            const top =
+              sweatPercents[index][0] > 50
+                ? `calc(${sweatPercents[index][0]}% - ${heightToSubtract}px)`
+                : sweatPercents[index][0] + "%";
+            const left =
+              sweatPercents[index][1] > 50
+                ? `calc(${sweatPercents[index][1]}% - ${widthToSubtract}px)`
+                : sweatPercents[index][1] + "%";
+            return (
+              <div>
+                <ClothCard
+                  top={top}
+                  left={left}
+                  src={sweat}
                   alt="image of an Alaks hoodie"
                 />
               </div>
