@@ -55,7 +55,7 @@ export default function Shop() {
 
         <Collection>
           <CollectionText>
-            <h3 className="text-3xl uppercase">
+            <h3 className="text-[40px] md:text-5xl uppercase">
               <AnimatedText text="tshirts" />
             </h3>
             <p>
@@ -86,7 +86,7 @@ export default function Shop() {
 
         <Collection>
           <CollectionText>
-            <h3 className="text-3xl uppercase">
+            <h3 className="text-[40px] md:text-5xl uppercase">
               <AnimatedText text="hoodies" />
             </h3>
             <p>
@@ -117,7 +117,7 @@ export default function Shop() {
 
         <Collection>
           <CollectionText>
-            <h3 className="text-3xl uppercase">
+            <h3 className="text-[40px] md:text-5xl uppercase">
               <AnimatedText text="Sweatshirts" />
             </h3>
             <p>
@@ -148,7 +148,7 @@ export default function Shop() {
 
         <Collection>
           <CollectionText>
-            <h3 className="text-3xl uppercase">
+            <h3 className="text-[40px] md:text-5xl uppercase">
               <AnimatedText text="shorts" />
             </h3>
             <p>
@@ -179,7 +179,7 @@ export default function Shop() {
 
         <Collection>
           <CollectionText>
-            <h3 className="text-3xl uppercase">
+            <h3 className="text-[40px] md:text-5xl uppercase">
               <AnimatedText text="trousers" />
             </h3>
             <p>
