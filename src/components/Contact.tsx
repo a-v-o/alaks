@@ -6,13 +6,13 @@ export default function Contact() {
       <p>Get in touch with us</p>
       <div className="flex justify-center gap-8">
         <a
-          href="https://www.tiktok.com/@alaks"
+          href="https://www.tiktok.com/@alaks_line"
           className="p-2 rounded-lg flex justify-center items-center bg-black text-white hover:bg-white hover:text-black transition-all"
         >
           <BsTiktok />
         </a>
         <a
-          href="https://www.instagram.com/alaks"
+          href="https://www.instagram.com/alaks_line"
           className="p-2 rounded-lg flex justify-center items-center bg-black text-white hover:bg-white hover:text-black transition-all"
         >
           <BsInstagram />
